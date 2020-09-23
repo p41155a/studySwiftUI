@@ -11,15 +11,14 @@ struct Home: View {
     let store: Store
     
     var body: some View {
-        List(store.products, id: \.name) { product in
-            ProductRow(product: product)
+        NavigationView {
+            List(store.products, id: \.name) { product in
+                NavigationLink(destination: Text("상세 정보")) {
+                    ProductRow(product: product)
+                }
+            }
+            .navigationBarTitle("과일마트")
         }
-        
-//        VStack {
-//            ProductRow(product: productSamples[0])
-//            ProductRow(product: productSamples[1])
-//            ProductRow(product: productSamples[2])
-//        }.padding([.leading, .trailing], 12)
     }
 }
 
