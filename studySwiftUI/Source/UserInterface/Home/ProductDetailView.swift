@@ -99,8 +99,11 @@ private extension ProductDetailView {
 
 struct ProductDetailView_Previews: PreviewProvider {
   static var previews: some View {
-    Group {
-      ProductDetailView(product: productSamples[0])
+    let source1 = ProductDetailView(product: productSamples[0])
+    let source2 = ProductDetailView(product: productSamples[1])
+    return Group {
+      Preview(source: source1) // 변수 따로 설정하지 않으면 4가지 환경에서의 프리뷰 출력 (기기3개, 다크모드)
+      Preview(source: source2, devices: [.iPhone11Pro], displayDarkMode: false)
     }
   }
 }
