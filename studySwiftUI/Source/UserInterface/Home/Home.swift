@@ -13,7 +13,7 @@ struct Home: View {
     var body: some View {
         NavigationView {
             List(store.products, id: \.name) { product in
-                NavigationLink(destination: Text("상세 정보")) {
+                NavigationLink(destination: ProductDetailView(product: product)) {
                     ProductRow(product: product)
                 }
             }
