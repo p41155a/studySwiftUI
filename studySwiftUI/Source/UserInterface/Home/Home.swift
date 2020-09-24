@@ -16,7 +16,6 @@ struct Home: View {
         NavigationLink(destination: ProductDetailView(product: product)) {
           ProductRow(product: product)
         }
-//        .buttonStyle(PlainButtonStyle())
       }
       .navigationBarTitle("과일마트")
     }

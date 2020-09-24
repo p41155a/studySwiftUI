@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FF9E91FC251C3B9900E40268 /* QuantitySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9E91FB251C3B9900E40268 /* QuantitySelector.swift */; };
 		FF9E9201251C5D0100E40268 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9E9200251C5D0100E40268 /* FavoriteButton.swift */; };
+		FF9E9206251C633A00E40268 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9E9205251C633A00E40268 /* Order.swift */; };
 		FFC62CB5251B348600B4149E /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC62CB4251B348600B4149E /* Preview.swift */; };
 		FFD80341251AEF2A0033367A /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD80340251AEF2A0033367A /* BundleExtension.swift */; };
 		FFD8034A251AFA7B0033367A /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD80349251AFA7B0033367A /* Store.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		FF9E91FB251C3B9900E40268 /* QuantitySelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantitySelector.swift; sourceTree = "<group>"; };
 		FF9E9200251C5D0100E40268 /* FavoriteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		FF9E9205251C633A00E40268 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		FFC62CB4251B348600B4149E /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
 		FFD80340251AEF2A0033367A /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
 		FFD80349251AFA7B0033367A /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 			children = (
 				FFF5E12D25189DB9004253DF /* Product.swift */,
 				FFD80349251AFA7B0033367A /* Store.swift */,
+				FF9E9205251C633A00E40268 /* Order.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				FFD80341251AEF2A0033367A /* BundleExtension.swift in Sources */,
 				FFF5E0192518729A004253DF /* Home.swift in Sources */,
 				FFF5E12925189B3B004253DF /* ColorExtension.swift in Sources */,
+				FF9E9206251C633A00E40268 /* Order.swift in Sources */,
 				FFF5E12E25189DB9004253DF /* Product.swift in Sources */,
 				FFFAAD83251B055700C01F15 /* ProductDetailView.swift in Sources */,
 			);
@@ -557,7 +561,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"studySwiftUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "studySwiftUI/Source/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -577,7 +581,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"studySwiftUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "studySwiftUI/Source/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
