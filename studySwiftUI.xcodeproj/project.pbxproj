@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF9E91FC251C3B9900E40268 /* QuantitySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9E91FB251C3B9900E40268 /* QuantitySelector.swift */; };
 		FFC62CB5251B348600B4149E /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC62CB4251B348600B4149E /* Preview.swift */; };
 		FFD80341251AEF2A0033367A /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD80340251AEF2A0033367A /* BundleExtension.swift */; };
 		FFD8034A251AFA7B0033367A /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD80349251AFA7B0033367A /* Store.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF9E91FB251C3B9900E40268 /* QuantitySelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantitySelector.swift; sourceTree = "<group>"; };
 		FFC62CB4251B348600B4149E /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
 		FFD80340251AEF2A0033367A /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
 		FFD80349251AFA7B0033367A /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				FFF5E0182518729A004253DF /* Home.swift */,
 				FFF5E12325189980004253DF /* ProductRow.swift */,
 				FFFAAD82251B055700C01F15 /* ProductDetailView.swift */,
+				FF9E91FB251C3B9900E40268 /* QuantitySelector.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				FFF5E12425189980004253DF /* ProductRow.swift in Sources */,
 				FFF5DFE025183F3D004253DF /* AppDelegate.swift in Sources */,
 				FFC62CB5251B348600B4149E /* Preview.swift in Sources */,
+				FF9E91FC251C3B9900E40268 /* QuantitySelector.swift in Sources */,
 				FFF5DFE225183F3D004253DF /* SceneDelegate.swift in Sources */,
 				FFD8034A251AFA7B0033367A /* Store.swift in Sources */,
 				FFD80341251AEF2A0033367A /* BundleExtension.swift in Sources */,
