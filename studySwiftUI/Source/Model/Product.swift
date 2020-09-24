@@ -28,3 +28,4 @@ let productSamples = [
 
 extension Product: Decodable { }
 extension Product: Identifiable { } // 프로토콜 채택
+extension Product: Equatable {}

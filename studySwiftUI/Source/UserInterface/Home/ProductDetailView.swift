@@ -52,10 +52,7 @@ private extension ProductDetailView {
           .font(.largeTitle).fontWeight(.medium)
           .foregroundColor(.black)
         Spacer()
-        Image(systemName: "heart") // 즐겨찾기 버튼
-          .imageScale(.large)
-          .foregroundColor(Color.peach)
-          .frame(width: 32, height: 32)
+        FavoriteButton(product: product)
       }
       Text(splitText(product.description)) // 상품 설명
         .foregroundColor(.secondaryText)

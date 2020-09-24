@@ -8,22 +8,24 @@
 import SwiftUI
 
 struct Home: View {
-    let store: Store
-    
-    var body: some View {
-        NavigationView {
-            List(store.products, id: \.name) { product in
-                NavigationLink(destination: ProductDetailView(product: product)) {
-                    ProductRow(product: product)
-                }
-            }
-            .navigationBarTitle("과일마트")
+  @EnvironmentObject private var store: Store
+  
+  var body: some View {
+    NavigationView {
+      List(store.products, id: \.name) { product in
+        NavigationLink(destination: ProductDetailView(product: product)) {
+          ProductRow(product: product)
         }
+//        .buttonStyle(PlainButtonStyle())
+      }
+      .navigationBarTitle("과일마트")
     }
+  }
 }
 
 struct Home_Previews: PreviewProvider {
-    static var previews: some View {
-        Preview(source: Home(store: Store()))
-    }
+  static var previews: some View {
+    Preview(source: Home())
+      .environmentObject(Store())
+  }
 }
