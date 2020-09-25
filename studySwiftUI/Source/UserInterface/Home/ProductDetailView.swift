@@ -11,7 +11,7 @@ struct ProductDetailView: View {
     @State private var quantity: Int = 1
     @State private var showimgAlert: Bool = false
     @State private var showingPopup: Bool = false
-    @EnvironmentObject private var store: Store
+    @EnvironmentObject private var store: Store // 주문내역 저장
     
     let product: Product // 상품 정보를 전달받기 위한 프로퍼티 선언
     var body: some View {

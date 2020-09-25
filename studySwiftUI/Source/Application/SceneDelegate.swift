@@ -14,15 +14,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        let contentView = Home()
-          .environmentObject(Store()) // 환격 객체 주입
+        let rootView = Home()
+            .accentColor(.primary)
+            .environmentObject(Store()) // 환격 객체 주입
 
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
+            window.rootViewController = UIHostingController(rootView: rootView)
             self.window = window
             window.makeKeyAndVisible()
         }
+    }
+    
+    private func configureAppearance() {
+        // large 디스플레이 모드일 때 적용
+        UINavigationBar.appearance().largeTitleTextAttributes = [
+            .foregroundColor: UIColor(named: "peach")!
+        ]
+        // inline 디스플레이 모드일 때 적용
+        UINavigationBar.appearance().titleTextAttributes = [
+            .foregroundColor: UIColor(named: "peach")!
+        ]
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

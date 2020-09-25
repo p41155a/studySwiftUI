@@ -85,19 +85,19 @@ fileprivate struct PopupItem<Item: Identifiable>: ViewModifier {
 
 extension View {
     func popup<Content: View>(
-      isPresented: Binding<Bool>,
-      size: CGSize? = nil,
-      style: PopupStyle = .none,
-      @ViewBuilder content: () -> Content
+        isPresented: Binding<Bool>,
+        size: CGSize? = nil,
+        style: PopupStyle = .none,
+        @ViewBuilder content: () -> Content
     ) -> some View {
-      if isPresented.wrappedValue {
-        let popup = Popup(size: size, style: style, message: content())
-        let popupToggle = PopupToggle(isPresented: isPresented)
-        let modifiedContent = self.modifier(popup).modifier(popupToggle)
-        return AnyView(modifiedContent)
-      } else {
-        return AnyView(self)
-      }
+        if isPresented.wrappedValue {
+            let popup = Popup(size: size, style: style, message: content())
+            let popupToggle = PopupToggle(isPresented: isPresented)
+            let modifiedContent = self.modifier(popup).modifier(popupToggle)
+            return AnyView(modifiedContent)
+        } else {
+            return AnyView(self)
+        }
     }
     
     func popup<Content: View, Item: Identifiable>(
@@ -114,6 +114,31 @@ extension View {
             return AnyView(modifiedContent)
         } else {
             return AnyView(self)
+        }
+    }
+    
+    func popupOverContext<Item: Identifiable, Content: View>(
+        item: Binding<Item?>,
+        size: CGSize? = nil,
+        style: PopupStyle = .none,
+        ignoringEdges edges: Edge.Set = .all,
+        @ViewBuilder content: (Item) -> Content
+    ) -> some View  {
+        let isNonNil = item.wrappedValue != nil
+        return ZStack { // 컨텍스트를 덮는 뷰를 만들기 위해 ZStack 사용
+            self
+                .blur(radius: isNonNil && style == .blur ? 2 : 0)
+            
+            if isNonNil {
+                Color.black
+                    .luminanceToAlpha()
+                    // 색을 투명도와 연결해 주는 수식어 -> 하양이면 검고, 검정이면 투명
+                    // Color.clear: 아무 역할도 하지 않아 마치 뷰가 없는 것처럼 취급
+                    // luminanceToAlpha: 투명하더라도 하나의 뷰로 취급 -> 상호작용 차단
+                    .popup(item: item, size: size, style: style, content: content)
+                    .edgesIgnoringSafeArea(edges)
+                    // 안전 영역을 현재 컨텍스트에 영향을 주지 않으면서 원하는 대로 설정 가능
+            }
         }
     }
 }
