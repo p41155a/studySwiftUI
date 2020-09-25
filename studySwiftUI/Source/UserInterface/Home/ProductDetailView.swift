@@ -10,6 +10,7 @@ import SwiftUI
 struct ProductDetailView: View {
     @State private var quantity: Int = 1
     @State private var showimgAlert: Bool = false
+    @State private var showingPopup: Bool = false
     @EnvironmentObject private var store: Store
     
     let product: Product // 상품 정보를 전달받기 위한 프로퍼티 선언
@@ -22,6 +23,7 @@ struct ProductDetailView: View {
         .alert(isPresented: $showimgAlert, content: {
             confirmAlert
         })
+        .popup(isPresented: $showingPopup){ OrderCompletedMessage() }
     }
 }
 private extension ProductDetailView {
@@ -88,6 +90,7 @@ private extension ProductDetailView {
                             .foregroundColor(Color.white))
                 .padding(.vertical, 8)
         }
+        .buttonStyle(ShrinkButtonStyle()) // 커스텀 버튼 스타일 적용
     }
     
     var confirmAlert: Alert {
@@ -101,6 +104,7 @@ private extension ProductDetailView {
     
     func placeOrder() {
         store.placeOrder(product: product, quantity: quantity)
+        showingPopup = true
     }
     
     func splitText(_ text: String) -> String {
