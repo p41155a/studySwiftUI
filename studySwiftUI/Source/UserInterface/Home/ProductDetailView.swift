@@ -11,28 +11,44 @@ struct ProductDetailView: View {
     @State private var quantity: Int = 1
     @State private var showimgAlert: Bool = false
     @State private var showingPopup: Bool = false
+    @State private var willAppear: Bool = false
     @EnvironmentObject private var store: Store // 주문내역 저장
     
     let product: Product // 상품 정보를 전달받기 위한 프로퍼티 선언
     var body: some View {
         VStack(spacing: 0) {
-            productImage
+            if willAppear {
+                productImage
+            }
             orderView
         }
         .edgesIgnoringSafeArea(.top)
         .alert(isPresented: $showimgAlert, content: {
             confirmAlert
         })
-        .popup(isPresented: $showingPopup){ OrderCompletedMessage() }
+        .popup(isPresented: $showingPopup){
+            OrderCompletedMessage() }
+        // 화면이 나타나는 시점에 productImage가 뷰 계층 구조에 추가되도록 구현
+        .onAppear { self.willAppear = true }
     }
 }
 private extension ProductDetailView {
     // MARK: View
     
     var productImage: some View {
-        GeometryReader { _ in
+        // 상세화면 진입시 이미지 애니메이션
+        let effect = AnyTransition.scale.combined(with: .opacity)
+            .animation(Animation.easeInOut(duration: 0.4).delay(0.05))
+        return GeometryReader { _ in
             ResizedImage(self.product.imageName)
         }
+        .transition(effect)
+        
+//        GeometryReader { _ in
+//            ResizedImage(self.product.imageName)
+//        }
+//        .transition(AnyTransition.scale.combined(with: .opacity))
+//        .animation(Animation.easeInOut(duration: 0.4).delay(0.05))
     }
     
     var orderView: some View {

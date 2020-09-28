@@ -12,10 +12,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        let rootView = Home()
-            .accentColor(.primary)
+        
+        configureAppearance()
+        
+        let rootView = MainTabView()
             .environmentObject(Store()) // 환격 객체 주입
 
         if let windowScene = scene as? UIWindowScene {
@@ -35,6 +36,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         UINavigationBar.appearance().titleTextAttributes = [
             .foregroundColor: UIColor(named: "peach")!
         ]
+        UITableView.appearance().backgroundColor = .clear
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

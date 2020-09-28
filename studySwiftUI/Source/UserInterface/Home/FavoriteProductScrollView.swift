@@ -18,6 +18,8 @@ struct FavoriteProductScrollView: View {
             }
         }
         .padding()
+        // 즐겨찾기 상품 추가 애니메이션
+        .transition(.slide)
     }
     
     var title: some View {
@@ -27,11 +29,12 @@ struct FavoriteProductScrollView: View {
             SystemImage("arrowtriangle.up.square")
                 .padding(4)
                 .rotationEffect(Angle(radians: showingImage ? .pi : 0))
-            
             Spacer()
         }
         .padding(.bottom, 8)
-        .onTapGesture { self.showingImage.toggle() }
+        .onTapGesture {
+            withAnimation { self.showingImage.toggle() }
+        }
     }
     
     var products: some View {
@@ -47,17 +50,22 @@ struct FavoriteProductScrollView: View {
                         })
                 }
             }
+            // 즐겨찾기 상품 추가 애니메이션
+            .animation(.spring(dampingFraction: 0.78))
         }
     }
     
     func eachProduct(_ product: Product) -> some View {
-        GeometryReader {
+        GeometryReader { g in
         // 스크롤 뷰 내에서 위치 정보를 얻도록 GeometryReader를 사용
-            ResizedImage(product.imageName, renderingMode: .original)
-                .clipShape(Circle())
-                .frame(width: 90, height: 90)
-                .scaleEffect(self.scaleValue(from: $0))
-                // 스크롤 위치에 따라 크기 조정
+            VStack {
+                ResizedImage(product.imageName, renderingMode: .original)
+                    .clipShape(Circle())
+                    .frame(width: 90, height: 90)
+                    .scaleEffect(self.scaleValue(from: g))
+                    // 스크롤 위치에 따라 크기 조정
+            }
+            .frame(width: 105, height: 105)
         }
         .frame(width: 105, height: 105)
     }

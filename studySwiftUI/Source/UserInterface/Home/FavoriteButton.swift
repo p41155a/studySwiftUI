@@ -22,7 +22,12 @@ struct FavoriteButton: View {
         }, label: {
             SystemImage(imageName, scale: .large, color: .peach)
                 .frame(width: 32, height: 32)
-                .onTapGesture{ self.store.toggleFavorite(of: self.product)}
+                .onTapGesture{
+                    // 즐겨찾기 상품 추가 애니메이션
+                    withAnimation {
+                        self.store.toggleFavorite(of: self.product)
+                    }
+                }
         })
     }
 }

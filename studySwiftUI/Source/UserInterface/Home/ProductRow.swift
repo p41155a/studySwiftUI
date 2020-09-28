@@ -10,6 +10,8 @@ import SwiftUI
 struct ProductRow: View {
     @EnvironmentObject var store: Store // 주문내역 저장
     @Binding var quickOrder: Product? // 팝업창에 상품 이름도 함께 출력해 주기 위한 상품 정보 저장
+    @State private var willAppear: Bool = false
+    
     let product: Product
     
     var body: some View {
@@ -17,6 +19,10 @@ struct ProductRow: View {
             productImage
             productDescription
         }
+        // 각 화면이 나타날 때마다 페이드 인/아웃
+        .opacity(willAppear ? 1 : 0)
+        .animation(.easeInOut(duration: 0.4))
+        .onAppear { self.willAppear = true }
         .frame(height: 150)
         .background(Color.primary.colorInvert()) // 주석처리 하여 테스트
         .cornerRadius(6) // 주석처리 하여 테스트 해보면 좋음
