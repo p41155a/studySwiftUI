@@ -11,7 +11,9 @@ struct MainTabView: View {
     private enum Tabs {
         case home, recipe, gallery, myPage
     }
+    
     @State private var selectedTab: Tabs = .home // 기본 탭
+    
     var body: some View {
         TabView(selection: $selectedTab) {
             Group {
@@ -37,7 +39,7 @@ private extension MainTabView {
     }
     
     var recipe: some View {
-        Text("레시피")
+        RecipeView()
             .tag(Tabs.recipe)
             .tabItem(image: "book", text: "레시피")
     }

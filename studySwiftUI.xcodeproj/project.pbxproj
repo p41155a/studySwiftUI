@@ -10,6 +10,11 @@
 		FF1F3956251DAFAB00EFCFC2 /* OrderCompletedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1F3955251DAFAB00EFCFC2 /* OrderCompletedMessage.swift */; };
 		FF1F395B251DDC8A00EFCFC2 /* FavoriteProductScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1F395A251DDC8A00EFCFC2 /* FavoriteProductScrollView.swift */; };
 		FF1F3960251DE73500EFCFC2 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1F395F251DE73500EFCFC2 /* MainTabView.swift */; };
+		FF3AD8042521C21F0097BAC4 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AD8032521C21F0097BAC4 /* Recipe.swift */; };
+		FF3AD80A2521C2E80097BAC4 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AD8092521C2E80097BAC4 /* RecipeView.swift */; };
+		FF3AD8122521CFF20097BAC4 /* Stripes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AD8112521CFF20097BAC4 /* Stripes.swift */; };
+		FF3AD8172521D56D0097BAC4 /* ShapeClipModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AD8162521D56D0097BAC4 /* ShapeClipModifier.swift */; };
+		FF3AD81C2521D8240097BAC4 /* AnyTransitionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AD81B2521D8240097BAC4 /* AnyTransitionExtension.swift */; };
 		FF9E91FC251C3B9900E40268 /* QuantitySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9E91FB251C3B9900E40268 /* QuantitySelector.swift */; };
 		FF9E9201251C5D0100E40268 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9E9200251C5D0100E40268 /* FavoriteButton.swift */; };
 		FF9E9206251C633A00E40268 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9E9205251C633A00E40268 /* Order.swift */; };
@@ -56,6 +61,11 @@
 		FF1F3955251DAFAB00EFCFC2 /* OrderCompletedMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCompletedMessage.swift; sourceTree = "<group>"; };
 		FF1F395A251DDC8A00EFCFC2 /* FavoriteProductScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteProductScrollView.swift; sourceTree = "<group>"; };
 		FF1F395F251DE73500EFCFC2 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		FF3AD8032521C21F0097BAC4 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		FF3AD8092521C2E80097BAC4 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
+		FF3AD8112521CFF20097BAC4 /* Stripes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stripes.swift; sourceTree = "<group>"; };
+		FF3AD8162521D56D0097BAC4 /* ShapeClipModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeClipModifier.swift; sourceTree = "<group>"; };
+		FF3AD81B2521D8240097BAC4 /* AnyTransitionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyTransitionExtension.swift; sourceTree = "<group>"; };
 		FF9E91FB251C3B9900E40268 /* QuantitySelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantitySelector.swift; sourceTree = "<group>"; };
 		FF9E9200251C5D0100E40268 /* FavoriteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		FF9E9205251C633A00E40268 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
@@ -112,10 +122,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF3AD8082521C2D10097BAC4 /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				FF3AD8092521C2E80097BAC4 /* RecipeView.swift */,
+			);
+			path = Recipe;
+			sourceTree = "<group>";
+		};
 		FF9E9227251CA0DB00E40268 /* CustomStyle */ = {
 			isa = PBXGroup;
 			children = (
 				FF9E9228251CA0FD00E40268 /* ShrinkButtonStyle.swift */,
+				FF3AD8112521CFF20097BAC4 /* Stripes.swift */,
 			);
 			path = CustomStyle;
 			sourceTree = "<group>";
@@ -124,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				FF9E9236251D785200E40268 /* Popup.swift */,
+				FF3AD8162521D56D0097BAC4 /* ShapeClipModifier.swift */,
 			);
 			path = ViewModifier;
 			sourceTree = "<group>";
@@ -143,6 +163,7 @@
 			children = (
 				FFF5E12825189B3B004253DF /* ColorExtension.swift */,
 				FFD80340251AEF2A0033367A /* BundleExtension.swift */,
+				FF3AD81B2521D8240097BAC4 /* AnyTransitionExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -229,6 +250,7 @@
 			children = (
 				FF1F395F251DE73500EFCFC2 /* MainTabView.swift */,
 				FFF5E0172518727E004253DF /* Home */,
+				FF3AD8082521C2D10097BAC4 /* Recipe */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -253,6 +275,7 @@
 				FFF5E12D25189DB9004253DF /* Product.swift */,
 				FFD80349251AFA7B0033367A /* Store.swift */,
 				FF9E9205251C633A00E40268 /* Order.swift */,
+				FF3AD8032521C21F0097BAC4 /* Recipe.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -419,15 +442,20 @@
 			files = (
 				FF1F395B251DDC8A00EFCFC2 /* FavoriteProductScrollView.swift in Sources */,
 				FF9E9223251C9EF500E40268 /* ResizedImage.swift in Sources */,
+				FF3AD8172521D56D0097BAC4 /* ShapeClipModifier.swift in Sources */,
 				FFF5E12425189980004253DF /* ProductRow.swift in Sources */,
 				FFF5DFE025183F3D004253DF /* AppDelegate.swift in Sources */,
+				FF3AD80A2521C2E80097BAC4 /* RecipeView.swift in Sources */,
+				FF3AD81C2521D8240097BAC4 /* AnyTransitionExtension.swift in Sources */,
 				FFC62CB5251B348600B4149E /* Preview.swift in Sources */,
 				FF9E9201251C5D0100E40268 /* FavoriteButton.swift in Sources */,
 				FF9E91FC251C3B9900E40268 /* QuantitySelector.swift in Sources */,
 				FFF5DFE225183F3D004253DF /* SceneDelegate.swift in Sources */,
 				FFD8034A251AFA7B0033367A /* Store.swift in Sources */,
+				FF3AD8042521C21F0097BAC4 /* Recipe.swift in Sources */,
 				FF9E9237251D785200E40268 /* Popup.swift in Sources */,
 				FFD80341251AEF2A0033367A /* BundleExtension.swift in Sources */,
+				FF3AD8122521CFF20097BAC4 /* Stripes.swift in Sources */,
 				FFF5E0192518729A004253DF /* Home.swift in Sources */,
 				FFF5E12925189B3B004253DF /* ColorExtension.swift in Sources */,
 				FF1F3956251DAFAB00EFCFC2 /* OrderCompletedMessage.swift in Sources */,
