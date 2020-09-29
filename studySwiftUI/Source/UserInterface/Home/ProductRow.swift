@@ -28,6 +28,7 @@ struct ProductRow: View {
         .cornerRadius(6) // 주석처리 하여 테스트 해보면 좋음
         .shadow(color: Color.primaryShadow, radius: 1, x: 2, y: 2)
         .padding(.vertical, 8)
+        .contextMenu { contextMenu }
     }
 }
 
@@ -65,9 +66,26 @@ private extension ProductRow {
         }
     }
     
+    var contextMenu: some View {
+        VStack {
+            Button(action: { self.toggleFavorite() }) {
+                Text("Toggle Favorite")
+                SystemImage(self.product.isFavorite ? "heart.fill" : "heart")
+            }
+            Button(action: { self.orderProduct() }) {
+                Text("Order Product")
+                Symbol("cart")
+            }
+        }
+    }
+    
     func orderProduct() {
         quickOrder = product // 주문 상품 저장, 팝업창 출력 조건
         store.placeOrder(product: product, quantity: 1) // 상품 1개 주문
+    }
+    
+    func toggleFavorite() {
+        store.toggleFavorite(of: product)
     }
 }
 
