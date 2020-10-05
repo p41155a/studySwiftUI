@@ -26,6 +26,19 @@ final class Store: ObservableObject {
         print(order)
     }
     
+    // 주문 내역 삭제
+    func deleteOrder(at indexes: IndexSet) {
+        guard let index = indexes.first else {
+            return
+        }
+        orders.remove(at: index)
+    }
+    
+    // 순서 변경
+    func moveOrder(from indexes: IndexSet, to destination: Int) {
+        orders.move(fromOffsets: indexes, toOffset: destination)
+    }
+    
     // 파일 경로 구성
     var ordersFilePath: URL {
         // library 디렉터리에 있는 ApplicationSupport 디렉터리 URL
