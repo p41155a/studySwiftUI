@@ -12,9 +12,11 @@ final class Store: ObservableObject {
     @Published var orders: [Order] = [] {
         didSet { saveData(at: ordersFilePath, data: orders) }
     }
+    @Published var appSetting: AppSetting
     
-    init(filename: String = "ProductData.json") {
+    init(filename: String = "ProductData.json", appSetting: AppSetting = AppSetting()) {
         self.products = Bundle.main.decode(filename: filename, as: [Product].self)
+        self.appSetting = appSetting
         self.orders = loadData(at: ordersFilePath, type: [Order].self) // 앱 생성시 파일 읽어옴
     }
     

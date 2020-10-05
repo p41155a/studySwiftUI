@@ -54,7 +54,7 @@ private extension Home {
     }
     
     var showFavorite: Bool {
-      !store.products.filter ({ $0.isFavorite }).isEmpty
+        !store.products.filter ({ $0.isFavorite }).isEmpty && store.appSetting.showFavoriteList
     }
     
     func popupMessage(product: Product) -> some View {

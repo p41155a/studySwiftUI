@@ -23,7 +23,7 @@ struct ProductRow: View {
         .opacity(willAppear ? 1 : 0)
         .animation(.easeInOut(duration: 0.4))
         .onAppear { self.willAppear = true }
-        .frame(height: 150)
+        .frame(height: store.appSetting.productRowHeight) // 상품 이미지 높이
         .background(Color.primary.colorInvert()) // 주석처리 하여 테스트
         .cornerRadius(6) // 주석처리 하여 테스트 해보면 좋음
         .shadow(color: Color.primaryShadow, radius: 1, x: 2, y: 2)

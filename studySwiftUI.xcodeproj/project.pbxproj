@@ -20,6 +20,7 @@
 		FF3AD8332522D6090097BAC4 /* MyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AD8322522D6090097BAC4 /* MyPage.swift */; };
 		FF3AD83B2522DE750097BAC4 /* OrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AD83A2522DE750097BAC4 /* OrderListView.swift */; };
 		FF675B09252AA92300F857CA /* OrderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF675B08252AA92300F857CA /* OrderRow.swift */; };
+		FF675B0E252AD51800F857CA /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF675B0D252AD51800F857CA /* AppSetting.swift */; };
 		FF9E91FC251C3B9900E40268 /* QuantitySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9E91FB251C3B9900E40268 /* QuantitySelector.swift */; };
 		FF9E9201251C5D0100E40268 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9E9200251C5D0100E40268 /* FavoriteButton.swift */; };
 		FF9E9206251C633A00E40268 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9E9205251C633A00E40268 /* Order.swift */; };
@@ -76,6 +77,7 @@
 		FF3AD8322522D6090097BAC4 /* MyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage.swift; sourceTree = "<group>"; };
 		FF3AD83A2522DE750097BAC4 /* OrderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListView.swift; sourceTree = "<group>"; };
 		FF675B08252AA92300F857CA /* OrderRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRow.swift; sourceTree = "<group>"; };
+		FF675B0D252AD51800F857CA /* AppSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSetting.swift; sourceTree = "<group>"; };
 		FF9E91FB251C3B9900E40268 /* QuantitySelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantitySelector.swift; sourceTree = "<group>"; };
 		FF9E9200251C5D0100E40268 /* FavoriteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		FF9E9205251C633A00E40268 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				FFD80349251AFA7B0033367A /* Store.swift */,
 				FF9E9205251C633A00E40268 /* Order.swift */,
 				FF3AD8032521C21F0097BAC4 /* Recipe.swift */,
+				FF675B0D252AD51800F857CA /* AppSetting.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 				FFF5E12E25189DB9004253DF /* Product.swift in Sources */,
 				FF9E921E251C9CAA00E40268 /* SystemImage.swift in Sources */,
 				FF9E9229251CA0FD00E40268 /* ShrinkButtonStyle.swift in Sources */,
+				FF675B0E252AD51800F857CA /* AppSetting.swift in Sources */,
 				FF675B09252AA92300F857CA /* OrderRow.swift in Sources */,
 				FFFAAD83251B055700C01F15 /* ProductDetailView.swift in Sources */,
 				FF1F3960251DE73500EFCFC2 /* MainTabView.swift in Sources */,
