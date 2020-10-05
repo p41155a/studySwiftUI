@@ -27,6 +27,9 @@ struct MyPage: View {
             }
             .navigationBarTitle("마이 페이지")
         }
+        .sheet(isPresented: $isPickerPresented) {
+            ImagePickerView(pickedImage: self.$pickedImage)
+        }
     }
 }
 
