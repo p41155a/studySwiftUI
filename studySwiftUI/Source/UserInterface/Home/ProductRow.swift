@@ -74,7 +74,7 @@ private extension ProductRow {
             }
             Button(action: { self.orderProduct() }) {
                 Text("Order Product")
-                Symbol("cart")
+                SystemImage("cart")
             }
         }
     }

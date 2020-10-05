@@ -35,7 +35,7 @@ private extension MainTabView {
         Home()
             .tag(Tabs.home)
             .tabItem(image: "house", text: "홈")
-            .onAppear { UITableView.appearance().separatorStyle = .none }
+//            .onAppear { UITableView.appearance().separatorStyle = .none }
     }
     
     var recipe: some View {
@@ -51,9 +51,10 @@ private extension MainTabView {
     }
     
     var myPage: some View {
-        Text("마이페이지")
+        MyPage()
             .tag(Tabs.myPage)
             .tabItem(image: "person", text: "마이페이지")
+//            .onAppear { UITableView.appearance().separatorStyle = .singleLine }
     }
 }
     
@@ -66,6 +67,7 @@ fileprivate extension View {
         }
     }
 }
+
 
 struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {
